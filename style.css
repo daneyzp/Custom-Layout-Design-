@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}

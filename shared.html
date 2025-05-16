@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared Post</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      background: #fafafa;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .post-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<a href="services.html" class="back-link">‹ Back to Services</a>
+<div id="postContainer">Loading post...</div>
+
+<script>
+  // Helper to get URL params
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  const postUrl = getQueryParam('postUrl');
+  const container = document.getElementById('postContainer');
+
+  if (!postUrl) {
+    container.innerHTML = '<p>No post URL provided.</p>';
+  } else {
+    // Blogger feed URL with JSONP callback
+    // We'll fetch max 50 posts to search (adjust if needed)
+    const feedUrl = 'https://cldcode.blogspot.com/feeds/posts/default?alt=json-in-script&callback=showPost&max-results=50';
+
+    window.showPost = function(json) {
+      const entries = json.feed.entry || [];
+      const post = entries.find(p => {
+        const link = p.link.find(l => l.rel === 'alternate').href;
+        return link === postUrl;
+      });
+
+      if (!post) {
+        container.innerHTML = '<p>Post not found or may be removed.</p>';
+        return;
+      }
+
+      const content = post.content.$t;
+      const title = post.title.$t;
+
+      container.innerHTML = `
+        <h1>${title}</h1>
+        <div class="post-content">${content}</div>
+      `;
+    };
+
+    // Dynamically load the script with the JSONP callback
+    const script = document.createElement('script');
+    script.src = feedUrl;
+    document.body.appendChild(script);
+  }
+</script>
+
+</body>
+</html>

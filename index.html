@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CLD Code - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 10px 20px 5px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .search-box {
+      margin-top: 5px;
+    }
+
+    .search-box input {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: none;
+      width: 150px;
+      font-size: 14px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 5px 10px;
+      -webkit-tap-highlight-color: transparent;
+    }    
+    nav a:hover {
+  color: #0077cc;
+}
+
+    .content {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section-box {
+      background: transparent;
+      padding: 20px;
+      
+    
+    }
+
+    .section-box h2 {
+      margin-top: 0;
+      
+    }
+
+    .section-box p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-box {
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+
+      .search-box input {
+        width: 90%;
+      }
+      
+      .newsletter-widget {
+  max-width: 400px;
+  margin: 30px auto;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.newsletter-widget h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.newsletter-widget p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
+.newsletter-widget input[type="email"] {
+  padding: 10px;
+  width: 80%;
+  max-width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.newsletter-widget button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.newsletter-widget button:hover {
+  background: #0056b3;
+}
+   .blogger-comments {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blogger-comments h4,
+.blogger-comments .comments-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+.blogger-comments .comment {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.blogger-comments .comment-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.blogger-comments .comment-body {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.blogger-comments .comment-footer {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+.blogger-comments {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blogger-comments h4,
+.blogger-comments .comments-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+.blogger-comments .comment {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.blogger-comments .comment-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.blogger-comments .comment-body {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.blogger-comments .comment-footer {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">Custom Layout Design</div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="section-box">
+      <h2>Welcome to CLD</h2>
+      <p>Custom Layout Design (CLD) is a platform offering tools and widgets for Blogger customization. Discover services, widgets, and smart tools made for creators.</p>
+    </div>
+
+    <!-- Widget Box -->
+    <div class="section-box">
+      <h2>Follow Us</h2>
+      <div id="home-widget">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Social Buttons with Ripple</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: sans-serif;
+    }
+
+    .social-box {
+      width: 100%;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 16px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 600px) {
+      .social-box {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .social-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 999px;
+      background: transparent;
+      overflow: hidden;
+      height: 40px;
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .social-item:active {
+      transform: scale(0.95);
+    }
+
+    .social-item:hover {
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-box {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      flex-shrink: 0;
+    }
+
+    .icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .social-name {
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 600;
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.1);
+      transform: scale(0);
+      animation: ripple 600ms linear;
+      pointer-events: none;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .social-item {
+        height: 36px;
+      }
+
+      .icon-box {
+        width: 36px;
+        height: 36px;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+      }
+
+      .social-name {
+        font-size: 12px;
+        padding: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="social-box">
+    <a href="https://facebook.com/groups/1153183192211356/" class="social-item" target="_blank">
+      <div class="icon-box">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSKgPbAz4MKNauZqfdYemhkryTZFsaYkvjanmnzyT2xmGUOqFVRaMQLYJBrtosjg0P-9bsXCw3D07tvpyFq8bsc2ujAwJFvRsMirJkdH6-obqePn7yDEPwsg6ozxTU_cvu3egwFl_55ic_RANGK45VanBwVwRz0co3iSlEBdSwkbbssZbc0K40CwNiYWD0/s554/images.png" alt="Facebook">
+      </div>
+      <span class="social-name">Facebook</span>
+    </a>
+
+    <a href="https://www.instagram.com/kamito_s9?igsh=MW5qZHFvY3V0MWloNg==" class="social-item" target="_blank">
+      <div class="icon-box">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2aO9Hv5sp6pdP0nbX_AaYvGd2-eP-QfQn1QQfhwgpyghz2DdZ_MB4Kgqmmvb3MNRmrOSV1yrhYWCCpT9kfyZNWiWTfCtgRMmMN_VJNRXhOz9lsgNGXZj5tQy6GM0km4PndP5JmcL4lj9Vf2z9T9Pap2D4qto0tmo2eDh6jwKgjIfzitYLxBPIGpWPqa6h/s1280/instagram-6338393_1280.webp.png" alt="Instagram">
+      </div>
+      <span class="social-name">Instagram</span>
+    </a>
+
+    <a href="https://youtube.com/@dashringtone?si=jBfyZUWpPgNeM-tO" class="social-item" target="_blank">
+      <div class="icon-box">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyZ29uCALoGZ02NLO0NfKq_cZbXqc8YnHW0bh_TADqLTfe1OIx37TfiH8wlJDINRqq-hxOueHseg297LmXdGktUoo2zbE7UrnU7_riTAwCy2IQdcCLtnrcH0YMeGfCjaOSlOhEkCDkXKXjF17j-GMq5qgpy8HEFVeKslyL63MIx8obgZhdoyQmKTpj1F1W/s2000/Untitled237_20250503184452.png" alt="YouTube">
+      </div>
+      <span class="social-name">YouTube</span>
+    </a>
+
+    <a href="https://t.me/dotanimehubb" class="social-item" target="_blank">
+      <div class="icon-box">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiPJvJkq2qzJxYpv08IMIZ7gEPftrUjw3fM3MF_FRV6jfyZF1F6XAXlsBtnn7KWuYieS-dpC-KMqAc5RD6KXeMa8-R9ZXl4oispwJwSyv7Nk0NcPE5S6p1Uw0pwp3N6ItmGHWV1z-RGIGvDm7W5rg8cTk0_u3DPO7isxWKH8eLQcmbD1H7xwdJ6LqxXZcr/s210/apps.55245.13537716651231321.3067a421-6c2f-48a9-b77c-1e38e19146e6.jpg" alt="Telegram">
+      </div>
+      <span class="social-name">Telegram</span>
+    </a>
+  </div>
+
+  <script>
+    document.querySelectorAll(".social-item").forEach(button => {
+      button.addEventListener("click", function(e) {
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        const rect = this.getBoundingClientRect();
+        ripple.style.left = `${e.clientX - rect.left}px`;
+        ripple.style.top = `${e.clientY - rect.top}px`;
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+  </script>
+</body>
+</html>
+      </div> <div class="section-box">
+     
+      <div id="home-widget">
+        <!-- Newsletter Sign-Up Widget -->
+<div class="newsletter-widget">
+  <h3>Subscribe to Our Newsletter</h3>
+  <p>Get updates when we post new tools or features.</p>
+  <form action="https://formsubmit.co/roydaney95@gmail.com" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+ <div class="section-box">
+      <h2>Comment</h2>
+      <div id="about-widget">
+        <div class='blogger-comments'>
+  <b:include data='post' name='comments'/>
+</div></div>
+      </div>
+      </div> 
+  </div>
+    </div>  
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CLD. All rights reserved.<div>By Daney Roy</div></p>
+  </footer>
+</body>
+</html>
